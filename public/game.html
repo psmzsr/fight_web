@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>格斗对战</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="game-body">
+    <main class="arena">
+      <header class="arena-header">
+        <div>
+          <span id="roomLabel" class="pill"></span>
+          <span id="roleLabel" class="pill"></span>
+        </div>
+        <button id="leaveBtn" class="btn">离开</button>
+      </header>
+
+      <canvas id="game" width="960" height="540"></canvas>
+
+      <section class="controls">
+        <div class="control-card">
+          <h3>操作</h3>
+          <ul>
+            <li>移动：WASD 或 方向键</li>
+            <li>经典六键：J/K/L = 轻/中/重拳，U/I/O = 轻/中/重脚</li>
+            <li>格挡：按住“后”方向</li>
+            <li>蓝防（架势格挡）：按住 中拳+中脚（K+I）</li>
+            <li>迸发（架势冲击）：重拳+重脚（L+O）</li>
+            <li>绿冲（架势冲刺）：前前（双击前）</li>
+            <li>杰米技能：22P 喝酒、236P 连招、214K 倒立旋踢、空中 2K 下劈</li>
+          </ul>
+        </div>
+        <div class="control-card">
+          <h3>状态</h3>
+          <p id="statusText" class="muted">等待服务器...</p>
+          <p id="latencyText" class="muted">延迟：-- ms</p>
+        </div>
+      </section>
+    </main>
+    <script src="/game.js"></script>
+  </body>
+</html>

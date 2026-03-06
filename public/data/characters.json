@@ -1,0 +1,41 @@
+{
+  "defaultId": "ryu",
+  "characters": [
+    {
+      "id": "ryu",
+      "name": "隆",
+      "color": "#2d6bff",
+      "stats": {
+        "maxHp": 100,
+        "speed": 300,
+        "jump": -850,
+        "gravity": 2000,
+        "friction": 0.82
+      }
+    },
+    {
+      "id": "jamie",
+      "name": "杰米",
+      "color": "#57c1ff",
+      "stats": {
+        "maxHp": 98,
+        "speed": 310,
+        "jump": -860,
+        "gravity": 2000,
+        "friction": 0.83
+      }
+    },
+    {
+      "id": "kim",
+      "name": "金伯莉",
+      "color": "#ff4d4d",
+      "stats": {
+        "maxHp": 95,
+        "speed": 330,
+        "jump": -880,
+        "gravity": 2050,
+        "friction": 0.84
+      }
+    }
+  ]
+}

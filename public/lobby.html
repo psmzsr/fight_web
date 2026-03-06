@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>格斗大厅</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="lobby-body">
+    <main class="lobby">
+      <section class="panel">
+        <h1>格斗大厅</h1>
+        <p class="muted">创建房间、加入房间或观战。</p>
+        <div class="row">
+          <label class="label" for="displayName">显示名称</label>
+          <input id="displayName" class="input" maxlength="16" />
+          <button id="saveName" class="btn">保存</button>
+        </div>
+        <div class="row">
+          <label class="label" for="roomName">房间名称</label>
+          <input id="roomName" class="input" maxlength="24" placeholder="房间名称" />
+          <button id="createRoom" class="btn primary">创建房间</button>
+        </div>
+        <div class="row">
+          <label class="label" for="characterSelect">选择角色</label>
+          <select id="characterSelect" class="input"></select>
+          <button id="trainRoom" class="btn">训练模式</button>
+        </div>
+        <div class="row">
+          <label class="label" for="dummyToggle">训练AI</label>
+          <label class="checkbox">
+            <input id="dummyToggle" type="checkbox" />
+            木桩模式
+          </label>
+          <span class="muted">勾选后AI不动</span>
+        </div>
+        <div class="row">
+          <label class="label" for="privateToggle">私密房间</label>
+          <label class="checkbox">
+            <input id="privateToggle" type="checkbox" />
+            需要密码
+          </label>
+          <span class="muted">私密房间需密码</span>
+        </div>
+        <div class="row">
+          <label class="label" for="roomPassword">房间密码</label>
+          <input id="roomPassword" class="input" type="password" maxlength="16" placeholder="仅私密房间填写" disabled />
+          <span class="muted">1-16 位</span>
+        </div>
+        <div class="status">
+          <span id="connStatus" class="pill">连接中...</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>房间列表</h2>
+        <div class="row">
+          <label class="label" for="roomSearch">搜索</label>
+          <input id="roomSearch" class="input" placeholder="按房间名或ID搜索" />
+          <span class="muted">实时筛选</span>
+        </div>
+        <div id="rooms" class="rooms"></div>
+      </section>
+    </main>
+    <script src="/lobby.js"></script>
+  </body>
+</html>

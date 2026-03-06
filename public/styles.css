@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(180deg, #0a0f1d, #0e1a2f);
+  color: #e7ecf5;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.muted {
+  color: #9fb0cc;
+}
+
+.lobby-body {
+  padding: 32px;
+}
+
+.lobby {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.panel {
+  background: rgba(18, 28, 48, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkbox {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: #b6c7e6;
+  font-size: 14px;
+}
+
+.label {
+  font-size: 14px;
+  color: #b6c7e6;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(10, 14, 24, 0.8);
+  color: #e7ecf5;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: #2a3a58;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  background: #3a4e73;
+  transform: translateY(-1px);
+}
+
+.btn.primary {
+  background: #ff8b3d;
+  color: #1b1208;
+}
+
+.btn.primary:hover {
+  background: #ffb26f;
+}
+
+.status {
+  margin-top: 14px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  color: #d6e1f5;
+}
+
+.rooms {
+  display: grid;
+  gap: 10px;
+}
+
+.room-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(12, 18, 32, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.room-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  color: #b0c3e0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 140, 0, 0.18);
+  color: #ffd2a1;
+  font-size: 12px;
+}
+
+.room-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.game-body {
+  padding: 20px;
+}
+
+.arena {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.arena-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+canvas {
+  width: 100%;
+  max-width: 960px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0d1424;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.control-card {
+  background: rgba(18, 28, 48, 0.9);
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.control-card ul {
+  list-style: none;
+  margin-top: 8px;
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  color: #b6c7e6;
+}
+
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .room-card {
+    grid-template-columns: 1fr;
+  }
+  .room-actions {
+    justify-content: flex-start;
+  }
+}
